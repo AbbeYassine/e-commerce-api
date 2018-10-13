@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(["prefix" => "hello-world"], function () {
     Route::get('test', 'HelloWorldController@getMessageHelloWorld');
 });
+
+Route::group(["prefix" => "product"], function () {
+    Route::post('/add', 'ProductController@addProduct');
+});
